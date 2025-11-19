@@ -10,10 +10,11 @@ export default function Card({
   onDelete,
   onOpenImagePopup,
   trashIcon,
-  heartIcon,
   isLiked,
 }) {
   const { name, link } = card;
+  // Evita imagen vacía
+  const handleImageClick = () => link && onOpenImagePopup(card);
 
   const handleLike = () => {
     onCardLike(card);
@@ -23,22 +24,15 @@ export default function Card({
     onDelete(card);
   };
 
-  const handleImageClick = () => {
-    onOpenImagePopup(card);
-  };
-
   const cardLikeButtonClassName = `card__like-button ${
     isLiked ? "card__like-button_is-active" : ""
   }`;
 
   return (
     <li className="card">
-      <img
-        className="card__image"
-        src={link}
-        alt={name}
-        onClick={handleImageClick}
-      />
+      {link ? (
+        <img className="card__image" src={link} alt={name || "Imagen"} onClick={handleImageClick} />
+      ) : null}
       <button
         aria-label="Delete card"
         className="card__delete-button"

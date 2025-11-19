@@ -5,6 +5,8 @@ import "../ImagePopup/ImagePopup.css";
 import closeIcon from "../../assets/images/Close_Icon.png";
 
 export default function ImagePopup({ card, onClose }) {
+  if (!card?.link) return null;
+
   return (
     <div className="popup popup_type_image" id="imagePopup">
       <div className="popup__container popup__container_type_image">

@@ -92,7 +92,7 @@ function Main({
       <section className="profile">
         <div className="profile__image-container">
           <img
-            src={currentUser.avatar ? currentUser.avatar : ""}
+            src={currentUser.avatar ? currentUser.avatar : avatar}
             alt="Avatar"
             className="profile__avatar"
           />
@@ -136,7 +136,6 @@ function Main({
               onDelete={openDeleteCardPopup}
               onOpenImagePopup={openImagePopup}
               trashIcon={trashIcon}
-              heartIcon={heartIcon}
               isLiked={
                 typeof card.isLiked === "boolean"
                   ? card.isLiked

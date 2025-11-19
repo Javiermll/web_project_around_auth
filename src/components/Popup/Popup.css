@@ -207,7 +207,7 @@
 .popup__close-buttonImage {
   position: absolute;
   top: -55px;
-  right: 90px;
+  right: -15px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -324,6 +324,9 @@
   .popup__close-image {
     width: 26px;
     height: 26px;
+  }
+  .popup__close-buttonImage {
+    right: 128px;
   }
   .popup__close-buttonAdd {
     top: calc(50% - 240px); /* Atura del popup */

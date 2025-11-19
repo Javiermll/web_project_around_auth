@@ -138,7 +138,7 @@
   }
 }
 
-@media screen and (min-width: 545px) and (max-width: 1080px) {
+@media screen and (min-width: 545px) and (max-width: 880px) {
   .elements {
     max-width: max-content;
     grid-template-columns: 1fr 1fr;
